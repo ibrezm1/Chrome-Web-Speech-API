@@ -5,7 +5,7 @@
 
 .final {
   color: black;
-  padding-right: 3px; 
+  padding-right: 3px;
 }
 .interim {
   color: gray;
@@ -21,7 +21,7 @@
 }
 #start_button {
   border: 0;
-  background-color:transparent;
+  background-color: transparent;
   padding: 0;
   cursor: pointer;
 }
@@ -40,14 +40,47 @@ select {
 }
 
 @media screen and (max-width: 767px) {
-    #select_dialect {
-      position: absolute;
-      right: 0;
-    } 
+  #select_dialect {
+    position: absolute;
+    right: 0;
+  }
 }
 
 @media screen and (min-width: 768px) {
   select {
     margin-right: 10px;
   }
+}
+
+#results1 {
+  height: 200px;
+  max-height: 200px; /* Set the desired max height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  border: 1px solid #ccc; /* Optional: Add border for visual separation */
+  padding: 10px; /* Optional: Add padding for better styling */
+}
+
+/* styles.css */
+/* Styling for the user and bot messages */
+.message-wrapper {
+  display: flex;
+  align-items: flex-start;
+  margin: 10px;
+}
+
+.user-message {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: auto;
+  margin-left: 10px; /* Indent user messages from the left */
+}
+
+.bot-message {
+  background-color: #5c9eff;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: 10px; /* Indent bot messages from the right */
+  color: white;
 }

@@ -1,6 +1,8 @@
 # Chrome Web Speech API
  Voice to Text with Google Chrome Web Speech API 
  
+## Objective 
+To develop a everlistening chatbot Jarvis with javascript and langchain ( Open AI ), where the bot will also have some skills that can be added
  
 ## Live Demo
 **[https://bensonruan.com/voice-to-text-with-chrome-web-speech-api/](https://bensonruan.com/voice-to-text-with-chrome-web-speech-api/)**

@@ -28,3 +28,6 @@ At the moment, it only support Google Chrome version 25 or later on desktop and 
 
 ## Support me 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W6METMY)
+
+## Open in Sandbox
+[Open in Codesandbox](https://codesandbox.io/s/github/ibrezm1/Jarvis-Voice)

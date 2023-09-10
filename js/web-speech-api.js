@@ -65,7 +65,10 @@ $(document).ready(function () {
     showInfo("start");
     start_button.style.display = "inline-block";
     recognition = new webkitSpeechRecognition();
-    recognition.continuous = true;
+    // if mobile cannot use continious
+    // see stakoverflow for details
+    // https://stackoverflow.com/questions/35112561/speech-recognition-api-duplicated-phrases-on-android
+    recognition.continuous = !x_mobileFlg;
     recognition.interimResults = true;
 
     recognition.onstart = function () {

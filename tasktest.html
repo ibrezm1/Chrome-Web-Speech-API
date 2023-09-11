@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Task to Todoist</title>
+  </head>
+  <body>
+    <h1>Add Task to Todoist</h1>
+
+    <!-- Button to trigger the task creation -->
+    <button id="addTaskButton">Add Task</button>
+
+    <script>
+      // Replace 'YOUR_API_TOKEN' with your actual Todoist API token.
+      const apiToken = "YOUR_API_TOKEN";
+
+      // Replace 'PROJECT_ID' with the ID of the project you want to add the task to.
+      const projectId = "PROJECT_ID";
+
+      // Function to add a task to a specific project in Todoist
+      async function addTaskToTodoist() {
+        const taskContent = "Sample Task"; // Replace with the task content you want to add.
+
+        try {
+          const response = await fetch(
+            "https://api.todoist.com/rest/v1/tasks",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${apiToken}`
+              },
+              body: JSON.stringify({
+                content: taskContent,
+                project_id: projectId // Specify the project ID here.
+              })
+            }
+          );
+
+          if (response.ok) {
+            alert("Task added successfully!");
+          } else {
+            alert("Failed to add task.");
+          }
+        } catch (error) {
+          console.error("Error:", error);
+        }
+      }
+
+      // Add a click event listener to the button
+      document
+        .getElementById("addTaskButton")
+        .addEventListener("click", addTaskToTodoist);
+    </script>
+  </body>
+</html>

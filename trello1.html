@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create Trello Card</title>
+  </head>
+  <body>
+    <h1>Create Trello Card</h1>
+
+    <!-- Form for Card Name and Button -->
+    <input type="text" id="cardName" placeholder="Card Name" />
+    <button id="createCard">Create Card</button>
+
+    <script>
+      // Replace with your Trello API key, token, board ID, and list ID.
+      const apiKey = "99ad1283fce46e4dc5be6b36a2cf3707";
+      const apiToken =
+        "ATTA07c96840d8fa79389b0e84c1e5064dd3593f1a80ff06ce6e4c37bfbaf83827b55CB05221";
+      const boardId = "YOUR_BOARD_ID";
+      const listId = "64fd81523d8737612e6905db";
+
+      document.getElementById("createCard").addEventListener("click", () => {
+        const cardName = document.getElementById("cardName").value;
+        const url = `https://api.trello.com/1/cards?idList=${listId}&key=${apiKey}&token=${apiToken}`;
+
+        const myHeaders = new Headers();
+        myHeaders.append("Accept", "application/json");
+
+        const formdata = new FormData();
+        formdata.append("name", cardName);
+        formdata.append("desc", "testdesc");
+
+        const requestOptions = {
+          method: "POST",
+          headers: myHeaders,
+          body: formdata,
+          redirect: "follow"
+        };
+
+        fetch(url, requestOptions)
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.id) {
+              alert(`Card "${cardName}" created successfully.`);
+              // You can perform additional actions here if needed.
+            } else {
+              alert("Failed to create the card.");
+            }
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            alert("An error occurred while creating the card.");
+          });
+      });
+    </script>
+  </body>
+</html>

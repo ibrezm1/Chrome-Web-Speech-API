@@ -1,7 +1,11 @@
 // Replace with your Trello API key, token, board ID, and list ID.
 const apiKey = "99ad1283fce46e4dc5be6b36a2cf3707";
+//U2FsdGVkX19d6cU9NGA71XAgBcIJFd8IQtqjjD0IIoBy1q382kQLXJ2AFQPmhf3kc1AyVMMHaz0hAUBkMZvraQ==
+
 const apiToken =
   "ATTA07c96840d8fa79389b0e84c1e5064dd3593f1a80ff06ce6e4c37bfbaf83827b55CB05221";
+
+//U2FsdGVkX18sXd5sZHpr7VsSr6HFnDaVOI+h2Qj6fnONguZwJkMrUPgvU5l595B6AMjmWRpwueW9dJmor1IcZAOVcDL1eaFVv7Hd3ih0kmNeoT28032PKNnPfjRmExQh
 const listId = "64fd81523d8737612e6905db";
 
 // Define a function to add a card to Trello.
